@@ -718,69 +718,71 @@ const Home = () => {
 
       {/* Seção: Mural de Avaliações */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 3, ease: "easeOut" }}
-        viewport={{ amount: 0.2 }}
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 3, ease: "easeOut" }}
+  viewport={{ amount: 0.2 }}
+>
+  <div className="flex flex-col justify-center items-center py-16 bg-gray-100 px-4">
+    <div className="w-full max-w-5xl mx-auto text-center">
+      <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8">
+        Mural de Avaliações
+      </h1>
+      <Swiper
+        slidesPerView={1}
+        autoplay={{
+          disableOnInteraction: false,
+          delay: 2000,
+        }}
+        modules={[Autoplay]}
+        loop={true}
+        className="w-full"
       >
-        <div className="flex flex-col justify-center items-center py-16 bg-gray-100 px-4">
-          <div className="w-full max-w-5xl mx-auto text-center">
-            <h1 className="font-bold text-2xl sm:text-3xl md:text-3xl lg:text-4xl mb-8">
-              Mural de Avaliações
-            </h1>
-            <Swiper
-              slidesPerView={1}
-              autoplay={{
-                disableOnInteraction: false,
-                delay: 2000,
-              }}
-              modules={[Autoplay]}
-              loop={true}
-              className="w-full"
-            >
-              <SwiperSlide className="flex justify-center items-center">
-                <Image
-                  src="/images/avaliacao1.png"
-                  alt="Avaliação 1"
-                  width={400}
-                  height={300}
-                  sizes="(max-width: 768px) 80vw, 700px"
-                  className="w-auto h-auto mx-auto"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="flex justify-center items-center">
-                <Image
-                  src="/images/avaliacao2.png"
-                  alt="Avaliação 2"
-                  width={400}
-                  height={300}
-                  sizes="(max-width: 768px) 80vw, 700px"
-                  className="w-auto h-auto mx-auto"
-                />
-              </SwiperSlide>
-              <SwiperSlide className="flex justify-center items-center">
-                <Image
-                  src="/images/avaliacao3.png"
-                  alt="Avaliação 3"
-                  width={400}
-                  height={300}
-                  sizes="(max-width: 768px) 80vw, 700px"
-                  className="w-auto h-auto mx-auto"
-                />
-              </SwiperSlide>
-            </Swiper>
-            <div className="flex justify-center text-center grayscale mt-8">
-              <Image
-                src="/images/avaliargoogle.png"
-                alt="Avaliações Google"
-                width={300}
-                height={150}
-                className="max-w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </motion.div>
+        <SwiperSlide className="flex justify-center items-center">
+          <Image
+            src="/images/avaliacao1.png"
+            alt="Avaliação 1"
+            width={400}
+            height={300}
+            sizes="(max-width: 768px) 90vw, 700px"
+            className="w-[300px] sm:w-[400px] md:w-[400px] h-auto mx-auto"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="flex justify-center items-center">
+          <Image
+            src="/images/avaliacao2.png"
+            alt="Avaliação 2"
+            width={400}
+            height={300}
+            sizes="(max-width: 768px) 90vw, 700px"
+            className="w-[300px] sm:w-[400px] md:w-[400px] h-auto mx-auto"
+          />
+        </SwiperSlide>
+        <SwiperSlide className="flex justify-center items-center">
+          <Image
+            src="/images/avaliacao3.png"
+            alt="Avaliação 3"
+            width={400}
+            height={300}
+            sizes="(max-width: 768px) 90vw, 700px"
+            className="w-[300px] sm:w-[400px] md:w-[400px] h-auto mx-auto"
+          />
+        </SwiperSlide>
+      </Swiper>
+      <div className="flex justify-center text-center grayscale mt-8">
+        <Image
+          src="/images/avaliargoogle.png"
+          alt="Avaliações Google"
+          width={300}
+          height={150}
+          sizes="(max-width: 768px) 80vw, 150px"
+          className="w-[150px] sm:w-[300px] md:w-[300px] h-auto mx-auto"
+        />
+      </div>
+    </div>
+  </div>
+</motion.div>
+
     </div>
   );
 };
