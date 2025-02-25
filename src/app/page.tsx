@@ -41,15 +41,9 @@ const Home = () => {
       <AnimatedBackground />
 
       {/* Seção 1: Cabeçalho */}
-      <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 py-16">
-        <div className="flex flex-col gap-6 max-w-xl">
-          <h1 className="text-4xl font-bold">Diagnóstico de Alta Resolução</h1>
-          <p className="text-xl font-light">
-            Realizamos procedimentos de alta complexidade e estamos sempre investindo em nosso parque tecnológico para garantir a excelência nos laudos, tão respeitados pelo corpo clínico da cidade e adjacências.
-          </p>
-          <Button className="text-lg">Resultados Online</Button>
-        </div>
-        <div className="relative">
+      <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 py-10">
+        
+      <div className="relative">
           <Image
             src="/images/doctor.png"
             alt="Doctor"
@@ -64,6 +58,14 @@ const Home = () => {
             Equipamento moderno
           </h1>
         </div>
+
+        <div className="flex flex-col gap-6 max-w-xl">
+          <h1 className="text-4xl font-bold">Diagnóstico de Alta Resolução</h1>
+          <p className="text-xl font-light">
+            Realizamos procedimentos de alta complexidade e estamos sempre investindo em nosso parque tecnológico para garantir a excelência nos laudos, tão respeitados pelo corpo clínico da cidade e adjacências.
+          </p>
+          <Button className="text-lg">Resultados Online</Button>
+        </div>
       </section>
 
       {/* Seção 2: Convênios (Swiper) */}
@@ -75,20 +77,20 @@ const Home = () => {
             spaceBetween={20}
             autoplay={{
               disableOnInteraction: false,
-              delay: 1000,
+              delay: 2000,
             }}
             modules={[Autoplay]}
             loop={true}
             breakpoints={{
-              640: { slidesPerView: 2, spaceBetween: 20 },
-              768: { slidesPerView: 3, spaceBetween: 30 },
-              1024: { slidesPerView: 5, spaceBetween: 40 },
+              640: { slidesPerView: 3, spaceBetween: 10 },
+              768: { slidesPerView: 4, spaceBetween: 30 },
+              1024: { slidesPerView: 6, spaceBetween: 40 },
             }}
             className="w-full"
           >
             {imageUrls.map((url, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 hover:shadow-lg transition-shadow duration-300 flex justify-center items-center">
+                <div className="rounded-lg p-4 transition-shadow duration-300 flex justify-center items-center">
                   <img
                     src={url}
                     alt={`Slide ${index + 1}`}
@@ -107,9 +109,9 @@ const Home = () => {
           <Image
             src="/images/ressonancia.png"
             alt="Aparelho"
-            width={500}
-            height={500}
-            className="w-80 h-80 object-cover"
+            width={400}
+            height={400}
+            className="w-400 h-400 object-cover"
           />
         </div>
         <div className="flex flex-col gap-6 max-w-xl">
