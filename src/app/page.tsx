@@ -56,7 +56,7 @@ const Home = () => {
           loop={true}
         >
           <SwiperSlide>
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 py-10">
+            <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4 md:px-6 py-10">
               <div className="relative">
                 <Image
                   src="/images/doctor.png"
@@ -72,7 +72,7 @@ const Home = () => {
                   Equipamento moderno
                 </h1>
               </div>
-              <div className="flex flex-col gap-6 max-w-xl">
+              <div className="flex flex-col gap-6 max-w-xl text-center md:text-left">
                 <h1 className="text-4xl font-bold">
                   Diagnóstico de Alta Resolução
                 </h1>
@@ -88,7 +88,7 @@ const Home = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-6 py-16">
+            <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-6 py-16">
               <div className="flex-shrink-0">
                 <Image
                   src="/images/ressonancia.png"
@@ -98,7 +98,7 @@ const Home = () => {
                   className="w-[400px] h-[400px] object-cover"
                 />
               </div>
-              <div className="flex flex-col gap-6 max-w-xl">
+              <div className="flex flex-col gap-6 max-w-xl text-center md:text-left">
                 <h1 className="text-3xl font-bold">
                   O mais moderno equipamento de Ressonância Magnética de Niterói.
                 </h1>
@@ -186,7 +186,7 @@ const Home = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-6 py-10">
+            <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4 md:px-6 py-10">
               <div className="relative">
                 <Image
                   src="/images/people.png"
@@ -217,7 +217,7 @@ const Home = () => {
                   <FontAwesomeIcon icon={faStarHalfStroke} />
                 </h1>
               </div>
-              <div className="flex flex-col gap-6 max-w-xl">
+              <div className="flex flex-col gap-6 max-w-xl text-center md:text-left">
                 <h1 className="text-4xl font-bold">Excelência Reconhecida</h1>
                 <p className="text-xl font-light">
                   O IRSA se destaca pela alta aprovação de seus pacientes, fruto de
@@ -239,7 +239,7 @@ const Home = () => {
         transition={{ duration: 3, ease: "easeOut" }}
         viewport={{ amount: 0.2 }}
       >
-        <section className="px-6 py-16">
+        <section className="px-4 md:px-6 py-16">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-12">Nossos Convênios</h1>
             <Swiper
@@ -261,12 +261,12 @@ const Home = () => {
               {imageUrls.map((url, index) => (
                 <SwiperSlide key={index}>
                   <div className="rounded-lg p-4 transition-shadow duration-300 flex justify-center items-center">
-                  <Image
+                    <Image
                       src={url}
                       alt={`Slide ${index + 1}`}
                       width={150}
                       height={150}
-                      className="max-h-[50px] max-w-[150] mx-auto object-contain"
+                      className="mx-auto object-contain"
                     />
                   </div>
                 </SwiperSlide>
@@ -295,7 +295,7 @@ const Home = () => {
             <source src="/images/irsa-solidario.mp4" type="video/mp4" />
           </video>
           <div className="flex z-20 flex-col absolute inset-0 items-center justify-center gap-6 px-4">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold text-center">
               IRSA SOLIDÁRIO
             </h1>
             <div className="flex flex-col gap-5">
@@ -316,10 +316,11 @@ const Home = () => {
                   <path d="m9 12 2 2 4-4" />
                 </svg>
                 <p className="w-full max-w-[90%] sm:max-w-[600px] text-white font-light px-4">
-                  Se você não tem plano de saúde ou está desempregado, pode realizar exames por imagem com qualidade e preço acessível.
+                  Se você não tem plano de saúde ou está desempregado, pode realizar
+                  exames por imagem com qualidade e preço acessível.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"
@@ -372,7 +373,7 @@ const Home = () => {
         transition={{ duration: 3, ease: "easeOut" }}
         viewport={{ amount: 0.2 }}
       >
-        <section className="px-6 py-16 bg-gray-50">
+        <section className="px-4 md:px-6 py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto text-center">
             <h1 className="text-4xl font-bold mb-12">Nossos Exames</h1>
             <Swiper
@@ -630,15 +631,15 @@ const Home = () => {
         transition={{ duration: 3, ease: "easeOut" }}
         viewport={{ amount: 0.2 }}
       >
-        <div className="justify-center items-center flex flex-wrap py-16 gap-[100px]">
+        <div className="flex flex-col md:flex-row justify-center items-center py-16 gap-8 md:gap-[100px] px-4">
           <Image
-            className="rounded-full"
+            className="rounded-full mx-auto"
             src="/images/confianca.jpg"
             alt="Confiança"
             width={400}
             height={400}
           />
-          <div className="flex-col flex gap-[10px] p-5">
+          <div className="flex flex-col gap-4 p-5 text-center md:text-left">
             <h1 className="font-bold text-4xl">Sobre nós</h1>
             <p className="text-xl max-w-[600px] font-light">
               O IRSA, referência em exames de imagem na cidade de Niterói{" "}
@@ -659,8 +660,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="justify-center items-center flex flex-wrap py-16 gap-[100px] bg-gray-50">
-          <div className="flex flex-col bg-sky-900 rounded-2xl p-10 text-white gap-[20px]">
+        <div className="flex flex-col md:flex-row justify-center items-center py-16 gap-8 md:gap-[100px] bg-gray-50 px-4">
+          <div className="flex flex-col bg-sky-900 rounded-2xl p-10 text-white gap-4">
             <h1 className="text-3xl">Atendimento Humanizado</h1>
             <p className="max-w-[400px] font-light">
               Possui também uma equipe de médicos composta de profissionais
@@ -670,9 +671,9 @@ const Home = () => {
               mais segurança para você e sua família.
             </p>
           </div>
-          <div className="flex-col flex gap-[20px] p-5">
+          <div className="flex flex-col gap-4 p-5 text-center md:text-left">
             <h1 className="font-bold text-4xl">Você sabia?</h1>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -688,9 +689,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p> O IRSA é pioneiro em radiologia em Niterói. </p>
+              <p>O IRSA é pioneiro em radiologia em Niterói.</p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -706,9 +707,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p> Possui o equipamento mais amplo de Niterói </p>
+              <p>Possui o equipamento mais amplo de Niterói.</p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -724,9 +725,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p> É referência em todos os métodos diagnósticos. </p>
+              <p>É referência em todos os métodos diagnósticos.</p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -742,9 +743,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p> Todos seus exames são revisados. </p>
+              <p>Todos seus exames são revisados.</p>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -760,7 +761,7 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p> Possui canal de contato direto com o seu médico. </p>
+              <p>Possui canal de contato direto com o seu médico.</p>
             </div>
           </div>
         </div>
@@ -825,6 +826,7 @@ const Home = () => {
                 alt="Avaliações Google"
                 width={300}
                 height={150}
+                sizes="(max-width: 768px) 80vw, 300px"
                 className="max-w-full h-auto"
               />
             </div>
