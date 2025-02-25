@@ -28,6 +28,7 @@ export default function RootLayout({
           <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
             {/* Logo */}
             <div>
+              <a href="/">
               <Image
                 src="/images/img1.png"
                 alt="IRSA"
@@ -35,13 +36,15 @@ export default function RootLayout({
                 height={100}
                 className="cursor-pointer"
               />
+              </a>
             </div>
+            
             {/* Menu desktop */}
             <nav className="hidden md:flex items-center space-x-10">
-              <a href="#" className="text-gray-700 hover:text-gray-900">Exames</a>
-              <a href="#" className="text-gray-700 hover:text-gray-900">Sobre</a>
-              <a href="#" className="text-gray-700 hover:text-gray-900">Convênios</a>
-              <a href="#" className="text-gray-700 hover:text-gray-900">IRSA Solidário</a>
+              <a href="#exames" className="text-gray-700 hover:text-gray-900">Exames</a>
+              <a href="#sobre" className="text-gray-700 hover:text-gray-900">Sobre</a>
+              <a href="/convenios" className="text-gray-700 hover:text-gray-900">Convênios</a>
+              <a href="#solidario" className="text-gray-700 hover:text-gray-900">IRSA Solidário</a>
             </nav>
             {/* Botão Hamburger para mobile */}
             <div className="md:hidden">
@@ -74,10 +77,10 @@ export default function RootLayout({
           {menuOpen && (
             <nav className="md:hidden bg-white shadow-md">
               <div className="px-4 py-4 flex flex-col space-y-4">
-                <a href="#" className="text-gray-700 hover:text-gray-900">Exames</a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">Sobre</a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">Convênios</a>
-                <a href="#" className="text-gray-700 hover:text-gray-900">IRSA Solidário</a>
+                <a href="#exames" className="text-gray-700 hover:text-gray-900">Exames</a>
+                <a href="#sobre" className="text-gray-700 hover:text-gray-900">Sobre</a>
+                <a href="/convenios" className="text-gray-700 hover:text-gray-900">Convênios</a>
+                <a href="#solidario" className="text-gray-700 hover:text-gray-900">IRSA Solidário</a>
               </div>
             </nav>
           )}

@@ -4,9 +4,9 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import AnimatedBackground from "@/components/fundo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 const imageUrls = [
   "/images/convenio/1.jpg",
@@ -39,6 +39,8 @@ const imageUrls = [
 const Home = () => {
   return (
     <div className="">
+
+<motion.div initial={{ opacity:0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3, ease: "easeOut" }} viewport={{ amount: 0.2 }}>
 
     <Swiper
     slidesPerView={1}
@@ -221,13 +223,15 @@ const Home = () => {
       </SwiperSlide>
 
     </Swiper>
-
+    </motion.div>
+    
+    <motion.div initial={{ opacity:0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3, ease: "easeOut" }} viewport={{ amount: 0.2 }}>
       {/* Seção 2: Convênios (Swiper) */}
       <section className="px-6 py-16">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-12">Nossos Convênios</h1>
           <Swiper
-            slidesPerView={1}
+            slidesPerView={3}
             spaceBetween={20}
             autoplay={{
               disableOnInteraction: false,
@@ -256,37 +260,88 @@ const Home = () => {
           </Swiper>
         </div>
       </section>
+      </motion.div>
 
-      
-<div className="w-full h-[700px] relative">
+      <motion.div id="solidario" initial={{ opacity:0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3, ease: "easeOut" }} viewport={{ amount: 0.2 }}>
+      <div className="w-full h-[400px] sm:h-[500px] md:h-[700px] relative">
   <video autoPlay loop muted playsInline className="w-full h-full object-cover">
     <source src="/images/irsa-solidario.mp4" type="video/mp4" />
   </video>
-  <div className="flex z-20 flex-col absolute inset-0 items-center justify-center gap-[30px]">
-  <h1 className="text-white text-5xl font-bold">
-    IRSA SOLIDÁRIO
-  </h1>
-
-  <div className="gap-[20px] flex-col flex">
-    <div className="flex flex-wrap gap-4">
-      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-circle-check text-emerald-500 mt-3"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-      <p className="items-center max-w-[600px] z-20 text-white font-light text-lg" > Se você não tem plano de saúde ou está desempregado, pode realizar exames por imagem com qualidade e preço acessível. </p>
+  <div className="flex z-20 flex-col absolute inset-0 items-center justify-center gap-6 px-4">
+    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
+      IRSA SOLIDÁRIO
+    </h1>
+    <div className="flex flex-col gap-5">
+      <div className="flex flex-wrap gap-4 justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check text-emerald-500"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+        <p className="w-full max-w-[90%] sm:max-w-[600px] text-white font-light px-4">
+          Se você não tem plano de saúde ou está desempregado, pode realizar exames por imagem com qualidade e preço acessível.
+        </p>
+      </div>
+      <div className="flex flex-wrap gap-4 ">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check text-emerald-500"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+        <p className="w-full max-w-[90%] sm:max-w-[600px] text-white font-light px-4">
+          Além disso, é possível parcelar em até 5x sem juros.
+        </p>
+      </div>
+      <div className="flex flex-wrap gap-4 items-center justify-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="35"
+          height="35"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check text-emerald-500"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <path d="m9 12 2 2 4-4" />
+        </svg>
+        <p className="w-full max-w-[90%] sm:max-w-[600px] text-white font-light px-4">
+          Basta entrar em contato com nossa Central de Atendimento ou pelo WhatsApp e informar que deseja participar do IRSA SOLIDÁRIO.
+        </p>
+      </div>
     </div>
-    <div className="flex flex-wrap gap-4">
-      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-circle-check text-emerald-500"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-      <p className="items-center max-w-[600px] z-20 text-white font-light text-lg" >  Além disso, é possível parcelar em até 5x sem juros. </p>
-    </div>
-    <div className="flex flex-wrap gap-4">
-      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-circle-check text-emerald-500 mt-3"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-      <p className="items-center max-w-[600px] z-20 text-white font-light text-lg" >Basta entrar em contato com nossa Central de Atendimento ou pelo WhatsApp e informar que deseja participar do IRSA SOLIDÁRIO.</p>
-    </div>
-  </div>
   </div>
 </div>
+</motion.div>
+
 
 
 
       {/* Seção 4: Exames (Swiper) */}
+      <motion.div id="exames" initial={{ opacity:0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3, ease: "easeOut" }} viewport={{ amount: 0.2 }}>
       <section className="px-6 py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-12">Nossos Exames</h1>
@@ -510,7 +565,9 @@ const Home = () => {
           </Swiper>
         </div>
       </section>
+      </motion.div>
 
+      <motion.div id="sobre" initial={{ opacity:0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3, ease: "easeOut" }} viewport={{ amount: 0.2 }}>
       <div className=" justify-center items-center flex flex-wrap py-16 gap-[100px]">
         <img className="rounded-full" src="/images/confianca.jpg" alt="" />
         <div className="flex-col flex gap-[10px] p-5">
@@ -623,10 +680,14 @@ const Home = () => {
           </div>
       </div>
       </div>
+      </motion.div>
 
-      <div className="flex flex-col justify-center items-center py-16 bg-gray-100">
-  <div className="max-w-5xl mx-auto text-center">
-    <h1 className="font-bold text-4xl mb-8">Mural de Avaliações</h1>
+      <motion.div initial={{ opacity:0 }} whileInView={{ opacity: 1 }} transition={{ duration: 3, ease: "easeOut" }} viewport={{ amount: 0.2 }}>
+      <div className="flex flex-col justify-center items-center py-16 bg-gray-100 px-4">
+  <div className="w-full max-w-5xl mx-auto text-center">
+    <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-8">
+      Mural de Avaliações
+    </h1>
     <Swiper
       slidesPerView={1}
       autoplay={{
@@ -638,20 +699,38 @@ const Home = () => {
       className="w-full"
     >
       <SwiperSlide className="flex justify-center items-center">
-        <img src="/images/avaliacao1.png" alt="Avaliação 1" className="mx-auto" />
+        <img
+          src="/images/avaliacao1.png"
+          alt="Avaliação 1"
+          className="mx-auto max-w-full h-auto"
+        />
       </SwiperSlide>
       <SwiperSlide className="flex justify-center items-center">
-        <img src="/images/avaliacao2.png" alt="Avaliação 2" className="mx-auto" />
+        <img
+          src="/images/avaliacao2.png"
+          alt="Avaliação 2"
+          className="mx-auto max-w-full h-auto"
+        />
       </SwiperSlide>
       <SwiperSlide className="flex justify-center items-center">
-        <img src="/images/avaliacao3.png" alt="Avaliação 3" className="mx-auto" />
+        <img
+          src="/images/avaliacao3.png"
+          alt="Avaliação 3"
+          className="mx-auto max-w-full h-auto"
+        />
       </SwiperSlide>
     </Swiper>
-    <div className="text-center justify-center flex grayscale">
-      <img src="/images/avaliargoogle.png" alt="" />
+    <div className="flex justify-center text-center grayscale mt-8">
+      <img
+        src="/images/avaliargoogle.png"
+        alt="Avaliações Google"
+        className="max-w-full h-auto"
+      />
     </div>
   </div>
 </div>
+</motion.div>
+
 
     </div>
   );
