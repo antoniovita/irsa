@@ -41,196 +41,199 @@ const Home = () => {
     <div className="">
       {/* Slide principal */}
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 3, ease: "easeOut" }}
-        viewport={{ amount: 0.2 }}
-      >
-        <Swiper
-          slidesPerView={1}
-          autoplay={{
-            disableOnInteraction: false,
-            delay: 5000,
-          }}
-          modules={[Autoplay]}
-          loop={true}
-        >
-          <SwiperSlide>
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4 md:px-6 py-10">
-              <div className="relative">
-                <Image
-                  src="/images/doctor.png"
-                  alt="Doctor"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <h1 className="text-white absolute top-[50%] left-4 transform -translate-y-1/2 p-3 rounded-3xl bg-emerald-700 text-center animate-float">
-                  Atendimento excelente
-                </h1>
-                <h1 className="text-white absolute bottom-4 right-4 p-3 rounded-3xl bg-emerald-700 text-center animate-float">
-                  Equipamento moderno
-                </h1>
-              </div>
-              <div className="flex flex-col gap-6 max-w-xl text-center md:text-left">
-                <h1 className="text-4xl font-bold">
-                  Diagnóstico de Alta Resolução
-                </h1>
-                <p className="text-xl font-light">
-                  Realizamos procedimentos de alta complexidade e estamos
-                  sempre investindo em nosso parque tecnológico para garantir a
-                  excelência nos laudos, tão respeitados pelo corpo clínico da
-                  cidade e adjacências.
-                </p>
-                <Button className="text-lg">Resultados Online</Button>
-              </div>
-            </section>
-          </SwiperSlide>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 3, ease: "easeOut" }}
+  viewport={{ amount: 0.2 }}
+>
+  <Swiper
+    slidesPerView={1}
+    autoplay={{
+      disableOnInteraction: false,
+      delay: 5000,
+    }}
+    modules={[Autoplay]}
+    loop={true}
+  >
+    {/* Slide 1 */}
+    <SwiperSlide>
+      <section className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 px-4 py-6">
+        <div className="relative">
+          <Image
+            src="/images/doctor.png"
+            alt="Doctor"
+            width={400}
+            height={400}
+            className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] object-cover"
+          />
+          <h1 className="text-white absolute top-[50%] left-2 transform -translate-y-1/2 p-2 sm:p-3 rounded-3xl bg-emerald-700 text-center animate-float text-sm sm:text-base">
+            Atendimento excelente
+          </h1>
+          <h1 className="text-white absolute bottom-2 right-2 p-2 sm:p-3 rounded-3xl bg-emerald-700 text-center animate-float text-sm sm:text-base">
+            Equipamento moderno
+          </h1>
+        </div>
+        <div className="flex flex-col gap-3 max-w-xs sm:max-w-xl text-center md:text-left">
+          <h1 className="font-bold text-xl sm:text-3xl md:text-4xl">
+            Diagnóstico de Alta Resolução
+          </h1>
+          <p className="text-sm sm:text-lg font-light">
+            Realizamos procedimentos de alta complexidade e estamos sempre
+            investindo em nosso parque tecnológico para garantir a excelência
+            nos laudos, tão respeitados pelo corpo clínico da cidade e adjacências.
+          </p>
+          <Button className="text-sm sm:text-lg">Resultados Online</Button>
+        </div>
+      </section>
+    </SwiperSlide>
 
-          <SwiperSlide>
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 px-4 md:px-6 py-16">
-              <div className="flex-shrink-0">
-                <Image
-                  src="/images/ressonancia.png"
-                  alt="Aparelho"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
+    {/* Slide 2 */}
+    <SwiperSlide>
+      <section className="flex flex-col md:flex-row items-center justify-center gap-4 px-4 py-8">
+        <div className="flex-shrink-0">
+          <Image
+            src="/images/ressonancia.png"
+            alt="Aparelho"
+            width={400}
+            height={400}
+            className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] object-cover"
+          />
+        </div>
+        <div className="flex flex-col gap-3 max-w-xs sm:max-w-xl text-center md:text-left">
+          <h1 className="font-bold text-xl sm:text-3xl md:text-4xl">
+            O mais moderno equipamento de Ressonância Magnética de Niterói.
+          </h1>
+          <div className="flex flex-col md:flex-row gap-2">
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-emerald-700"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <p className="text-xs sm:text-sm md:text-base">Excelência na Imagem</p>
               </div>
-              <div className="flex flex-col gap-6 max-w-xl text-center md:text-left">
-                <h1 className="text-3xl font-bold">
-                  O mais moderno equipamento de Ressonância Magnética de Niterói.
-                </h1>
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-circle-check-big text-emerald-700"
-                      >
-                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                        <path d="m9 11 3 3L22 4" />
-                      </svg>
-                      <p className="text-xl font-light">Excelência na Imagem</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-circle-check-big text-emerald-700"
-                      >
-                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                        <path d="m9 11 3 3L22 4" />
-                      </svg>
-                      <p className="text-xl font-light">Mais Espaço e Conforto</p>
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <div className="flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-circle-check-big text-emerald-700"
-                      >
-                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                        <path d="m9 11 3 3L22 4" />
-                      </svg>
-                      <p className="text-xl font-light">Diagnóstico Preciso</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="lucide lucide-circle-check-big text-emerald-700"
-                      >
-                        <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                        <path d="m9 11 3 3L22 4" />
-                      </svg>
-                      <p className="text-xl font-light">Suporta até 150kg</p>
-                    </div>
-                  </div>
-                </div>
-                <Button className="text-lg">Agende-se</Button>
+              <div className="flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-emerald-700"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <p className="text-xs sm:text-sm md:text-base">Mais Espaço e Conforto</p>
               </div>
-            </section>
-          </SwiperSlide>
+            </div>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-emerald-700"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <p className="text-xs sm:text-sm md:text-base">Diagnóstico Preciso</p>
+              </div>
+              <div className="flex items-center gap-1">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-emerald-700"
+                >
+                  <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                  <path d="m9 11 3 3L22 4" />
+                </svg>
+                <p className="text-xs sm:text-sm md:text-base">Suporta até 150kg</p>
+              </div>
+            </div>
+          </div>
+          <Button className="text-xs sm:text-sm md:text-lg">Agende-se</Button>
+        </div>
+      </section>
+    </SwiperSlide>
 
-          <SwiperSlide>
-            <section className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 px-4 md:px-6 py-10">
-              <div className="relative">
-                <Image
-                  src="/images/people.png"
-                  alt="Doctor"
-                  width={400}
-                  height={400}
-                  className="w-[400px] h-[400px] object-cover"
-                />
-                <div className="text-sm text-yellow-300 absolute top-[30%] left-20 transform -translate-y-1/2 p-3 rounded-3xl bg-sky-900 text-center animate-float">
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                </div>
-                <h1 className="text-sm font-light text-yellow-300 absolute bottom-20 right-4 p-3 rounded-3xl bg-sky-900 text-center animate-float">
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                </h1>
-                <h1 className="text-sm font-light text-yellow-300 absolute bottom-10 left-10 p-3 rounded-3xl bg-sky-900 text-center animate-float">
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStar} />
-                  <FontAwesomeIcon icon={faStarHalfStroke} />
-                </h1>
-              </div>
-              <div className="flex flex-col gap-6 max-w-xl text-center md:text-left">
-                <h1 className="text-4xl font-bold">Excelência Reconhecida</h1>
-                <p className="text-xl font-light">
-                  O IRSA se destaca pela alta aprovação de seus pacientes, fruto de
-                  investimentos contínuos em tecnologia de ponta e de uma equipe
-                  especializada que assegura diagnósticos precisos e um atendimento
-                  humanizado.
-                </p>
-                <Button className="text-lg">Ver avaliações</Button>
-              </div>
-            </section>
-          </SwiperSlide>
-        </Swiper>
-      </motion.div>
+    {/* Slide 3 */}
+    <SwiperSlide>
+      <section className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 px-4 py-6">
+        <div className="relative">
+          <Image
+            src="/images/people.png"
+            alt="Doctor"
+            width={400}
+            height={400}
+            className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] object-cover"
+          />
+          <div className="text-xs sm:text-sm text-yellow-300 absolute top-[30%] left-4 sm:left-10 transform -translate-y-1/2 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float">
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+          </div>
+          <h1 className="text-xs sm:text-sm font-light text-yellow-300 absolute bottom-4 right-2 sm:right-4 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float">
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+          </h1>
+          <h1 className="text-xs sm:text-sm font-light text-yellow-300 absolute bottom-2 left-2 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float">
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStar} />
+            <FontAwesomeIcon icon={faStarHalfStroke} />
+          </h1>
+        </div>
+        <div className="flex flex-col gap-3 max-w-xs sm:max-w-xl text-center md:text-left">
+          <h1 className="text-xl sm:text-3xl font-bold">Excelência Reconhecida</h1>
+          <p className="text-xs sm:text-sm md:text-lg">
+            O IRSA se destaca pela alta aprovação de seus pacientes, fruto de
+            investimentos contínuos em tecnologia de ponta e de uma equipe
+            especializada que assegura diagnósticos precisos e um atendimento
+            humanizado.
+          </p>
+          <Button className="text-xs sm:text-sm md:text-lg">Ver avaliações</Button>
+        </div>
+      </section>
+    </SwiperSlide>
+  </Swiper>
+</motion.div>
+
 
       {/* Seção: Convênios */}
       <motion.div
@@ -239,9 +242,9 @@ const Home = () => {
         transition={{ duration: 3, ease: "easeOut" }}
         viewport={{ amount: 0.2 }}
       >
-        <section className="px-4 md:px-6 py-16">
+        <section className="px-6 py-16 bg-gray-50">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-12">Nossos Convênios</h1>
+            <h1 className="font-bold text-xl sm:text-3xl md:text-4xl">Nossos Convênios</h1>
             <Swiper
               slidesPerView={3}
               spaceBetween={20}
@@ -261,12 +264,12 @@ const Home = () => {
               {imageUrls.map((url, index) => (
                 <SwiperSlide key={index}>
                   <div className="rounded-lg p-4 transition-shadow duration-300 flex justify-center items-center">
-                    <Image
+                  <Image
                       src={url}
                       alt={`Slide ${index + 1}`}
                       width={150}
                       height={150}
-                      className="mx-auto object-contain"
+                      className="max-h-[80px] max-w-[150] mx-auto object-contain"
                     />
                   </div>
                 </SwiperSlide>
@@ -295,7 +298,7 @@ const Home = () => {
             <source src="/images/irsa-solidario.mp4" type="video/mp4" />
           </video>
           <div className="flex z-20 flex-col absolute inset-0 items-center justify-center gap-6 px-4">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold text-center">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
               IRSA SOLIDÁRIO
             </h1>
             <div className="flex flex-col gap-5">
@@ -315,12 +318,11 @@ const Home = () => {
                   <circle cx="12" cy="12" r="10" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
-                <p className="w-full max-w-[90%] sm:max-w-[600px] text-white font-light px-4">
-                  Se você não tem plano de saúde ou está desempregado, pode realizar
-                  exames por imagem com qualidade e preço acessível.
+                <p className="w-full max-w-[90%] sm:text-lg sm:max-w-[600px] text-white font-light px-4">
+                  Se você não tem plano de saúde ou está desempregado, pode realizar exames por imagem com qualidade e preço acessível.
                 </p>
               </div>
-              <div className="flex flex-wrap gap-4 justify-center">
+              <div className="flex flex-wrap gap-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="35"
@@ -336,7 +338,7 @@ const Home = () => {
                   <circle cx="12" cy="12" r="10" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
-                <p className="w-full max-w-[90%] sm:max-w-[600px] text-white font-light px-4">
+                <p className="w-full max-w-[90%] sm:text-lg sm:max-w-[600px] text-white font-light px-4">
                   Além disso, é possível parcelar em até 5x sem juros.
                 </p>
               </div>
@@ -356,7 +358,7 @@ const Home = () => {
                   <circle cx="12" cy="12" r="10" />
                   <path d="m9 12 2 2 4-4" />
                 </svg>
-                <p className="w-full max-w-[90%] sm:max-w-[600px] text-white font-light px-4">
+                <p className="w-full max-w-[90%] sm:text-lg sm:max-w-[600px] text-white font-light px-4">
                   Basta entrar em contato com nossa Central de Atendimento ou pelo WhatsApp e informar que deseja participar do IRSA SOLIDÁRIO.
                 </p>
               </div>
@@ -373,9 +375,9 @@ const Home = () => {
         transition={{ duration: 3, ease: "easeOut" }}
         viewport={{ amount: 0.2 }}
       >
-        <section className="px-4 md:px-6 py-16 bg-gray-50">
+        <section className="px-6 py-16 bg-gray-50">
           <div className="max-w-6xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-12">Nossos Exames</h1>
+            <h1 className="font-bold text-xl sm:text-3xl md:text-4xl mb-12">Nossos Exames</h1>
             <Swiper
               autoplay={{
                 disableOnInteraction: false,
@@ -631,24 +633,24 @@ const Home = () => {
         transition={{ duration: 3, ease: "easeOut" }}
         viewport={{ amount: 0.2 }}
       >
-        <div className="flex flex-col md:flex-row justify-center items-center py-16 gap-8 md:gap-[100px] px-4">
+        <div className="justify-center items-center flex flex-wrap py-16 gap-[100px]">
           <Image
-            className="rounded-full mx-auto"
+            className="rounded-full w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] object-cover"
             src="/images/confianca.jpg"
             alt="Confiança"
             width={400}
             height={400}
           />
-          <div className="flex flex-col gap-4 p-5 text-center md:text-left">
-            <h1 className="font-bold text-4xl">Sobre nós</h1>
-            <p className="text-xl max-w-[600px] font-light">
+          <div className="flex-col flex gap-[10px] p-5">
+            <h1 className="font-bold text-xl sm:text-3xl md:text-4xl">Sobre nós</h1>
+            <p className="text-sm sm:text-lg font-light">
               O IRSA, referência em exames de imagem na cidade de Niterói{" "}
               <span className="text-emerald-500 font-sm">desde 1967</span>, realiza
               procedimentos de alta complexidade e está sempre investindo em seu
               parque tecnológico para garantir a excelência nos laudos, tão
               respeitados pelo corpo clínico da cidade e adjacências.
             </p>
-            <p className="text-xl max-w-[600px] font-light">
+            <p className="text-sm sm:text-lg font-light">
               Atualmente possui{" "}
               <span className="text-emerald-500 font-sm">
                 os mais modernos equipamentos{" "}
@@ -660,8 +662,8 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center py-16 gap-8 md:gap-[100px] bg-gray-50 px-4">
-          <div className="flex flex-col bg-sky-900 rounded-2xl p-10 text-white gap-4">
+        <div className="justify-center items-center flex flex-wrap py-16 gap-[100px] bg-gray-50">
+          <div className="flex flex-col bg-sky-900 rounded-2xl p-10 text-white gap-[20px]">
             <h1 className="text-3xl">Atendimento Humanizado</h1>
             <p className="max-w-[400px] font-light">
               Possui também uma equipe de médicos composta de profissionais
@@ -671,9 +673,9 @@ const Home = () => {
               mais segurança para você e sua família.
             </p>
           </div>
-          <div className="flex flex-col gap-4 p-5 text-center md:text-left">
+          <div className="flex-col flex gap-[20px] p-5">
             <h1 className="font-bold text-4xl">Você sabia?</h1>
-            <div className="flex flex-wrap gap-2 items-center justify-center">
+            <div className="flex flex-wrap gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -689,9 +691,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p>O IRSA é pioneiro em radiologia em Niterói.</p>
+              <p> O IRSA é pioneiro em radiologia em Niterói. </p>
             </div>
-            <div className="flex flex-wrap gap-2 items-center justify-center">
+            <div className="flex flex-wrap gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -707,9 +709,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p>Possui o equipamento mais amplo de Niterói.</p>
+              <p> Possui o equipamento mais amplo de Niterói </p>
             </div>
-            <div className="flex flex-wrap gap-2 items-center justify-center">
+            <div className="flex flex-wrap gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -725,9 +727,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p>É referência em todos os métodos diagnósticos.</p>
+              <p> É referência em todos os métodos diagnósticos. </p>
             </div>
-            <div className="flex flex-wrap gap-2 items-center justify-center">
+            <div className="flex flex-wrap gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -743,9 +745,9 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p>Todos seus exames são revisados.</p>
+              <p> Todos seus exames são revisados. </p>
             </div>
-            <div className="flex flex-wrap gap-2 items-center justify-center">
+            <div className="flex flex-wrap gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -761,7 +763,7 @@ const Home = () => {
                 <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                 <path d="m9 11 3 3L22 4" />
               </svg>
-              <p>Possui canal de contato direto com o seu médico.</p>
+              <p> Possui canal de contato direto com o seu médico. </p>
             </div>
           </div>
         </div>
@@ -826,7 +828,6 @@ const Home = () => {
                 alt="Avaliações Google"
                 width={300}
                 height={150}
-                sizes="(max-width: 768px) 80vw, 300px"
                 className="max-w-full h-auto"
               />
             </div>
