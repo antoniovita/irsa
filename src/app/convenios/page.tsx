@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Convenios = () => {
     const imageUrls = [
       "/images/convenio/1.jpg",
@@ -29,17 +31,19 @@ const Convenios = () => {
   
     return (
       <div className="container mx-auto p-4">
-        <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">
+        <h2 className="text-xl sm:text-3xl font-bold text-center mb-6 text-gray-800">
           Nossos Convênios
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {imageUrls.map((url, index) => (
             <div
               key={index}
-              className="flex items-center justify-center p-4 bg-white rounded-lg transition-shadow duration-300"
+              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 p-4 flex items-center justify-center"
             >
-              <img
+              <Image
                 src={url}
+                width={150}
+                height={150}
                 alt={`Convênio ${index + 1}`}
                 className="max-h-16 md:max-h-20 object-contain"
               />

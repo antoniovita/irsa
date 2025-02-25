@@ -121,7 +121,7 @@ const Home = () => {
                   <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                   <path d="m9 11 3 3L22 4" />
                 </svg>
-                <p className="text-xs sm:text-sm md:text-base">Excelência na Imagem</p>
+                <p className="text-xs sm:text-sm md:text-base font-light">Excelência na Imagem</p>
               </div>
               <div className="flex items-center gap-1">
                 <svg
@@ -139,7 +139,7 @@ const Home = () => {
                   <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                   <path d="m9 11 3 3L22 4" />
                 </svg>
-                <p className="text-xs sm:text-sm md:text-base">Mais Espaço e Conforto</p>
+                <p className="text-xs sm:text-sm md:text-base font-light">Mais Espaço e Conforto</p>
               </div>
             </div>
             <div className="flex flex-col gap-1">
@@ -159,7 +159,7 @@ const Home = () => {
                   <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                   <path d="m9 11 3 3L22 4" />
                 </svg>
-                <p className="text-xs sm:text-sm md:text-base">Diagnóstico Preciso</p>
+                <p className="text-xs sm:text-sm md:text-base font-light">Diagnóstico Preciso</p>
               </div>
               <div className="flex items-center gap-1">
                 <svg
@@ -177,7 +177,7 @@ const Home = () => {
                   <path d="M21.801 10A10 10 0 1 1 17 3.335" />
                   <path d="m9 11 3 3L22 4" />
                 </svg>
-                <p className="text-xs sm:text-sm md:text-base">Suporta até 150kg</p>
+                <p className="text-xs sm:text-sm md:text-base font-light">Suporta até 150kg</p>
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col gap-3 max-w-xs sm:max-w-xl text-center md:text-left">
           <h1 className="text-xl sm:text-3xl font-bold">Excelência Reconhecida</h1>
-          <p className="text-xs sm:text-sm md:text-lg">
+          <p className="text-xs sm:text-sm md:text-lg font-light">
             O IRSA se destaca pela alta aprovação de seus pacientes, fruto de
             investimentos contínuos em tecnologia de ponta e de uma equipe
             especializada que assegura diagnósticos precisos e um atendimento
@@ -637,7 +637,7 @@ const Home = () => {
           <path d="M21.801 10A10 10 0 1 1 17 3.335" />
           <path d="m9 11 3 3L22 4" />
         </svg>
-        <p className="text-xs sm:text-sm md:text-base">O IRSA é pioneiro em radiologia em Niterói.</p>
+        <p className="text-xs sm:text-sm md:text-base font-light">O IRSA é pioneiro em radiologia em Niterói.</p>
       </div>
       <div className="flex items-center gap-2">
         <svg
@@ -655,7 +655,7 @@ const Home = () => {
           <path d="M21.801 10A10 10 0 1 1 17 3.335" />
           <path d="m9 11 3 3L22 4" />
         </svg>
-        <p className="text-xs sm:text-sm md:text-base">Possui o equipamento mais amplo de Niterói.</p>
+        <p className="text-xs sm:text-sm md:text-base font-light">Possui o equipamento mais amplo de Niterói.</p>
       </div>
       <div className="flex items-center gap-2">
         <svg
@@ -673,7 +673,7 @@ const Home = () => {
           <path d="M21.801 10A10 10 0 1 1 17 3.335" />
           <path d="m9 11 3 3L22 4" />
         </svg>
-        <p className="text-xs sm:text-sm md:text-base">É referência em todos os métodos diagnósticos.</p>
+        <p className="text-xs sm:text-sm md:text-base font-light">É referência em todos os métodos diagnósticos.</p>
       </div>
       <div className="flex items-center gap-2">
         <svg
@@ -691,7 +691,7 @@ const Home = () => {
           <path d="M21.801 10A10 10 0 1 1 17 3.335" />
           <path d="m9 11 3 3L22 4" />
         </svg>
-        <p className="text-xs sm:text-sm md:text-base">Todos seus exames são revisados.</p>
+        <p className="text-xs sm:text-sm md:text-base font-light">Todos seus exames são revisados.</p>
       </div>
       <div className="flex items-center gap-2">
         <svg
@@ -709,7 +709,7 @@ const Home = () => {
           <path d="M21.801 10A10 10 0 1 1 17 3.335" />
           <path d="m9 11 3 3L22 4" />
         </svg>
-        <p className="text-xs sm:text-sm md:text-base">Possui canal de contato direto com o seu médico.</p>
+        <p className="text-xs sm:text-sm md:text-base font-light">Possui canal de contato direto com o seu médico.</p>
       </div>
     </div>
   </div>
