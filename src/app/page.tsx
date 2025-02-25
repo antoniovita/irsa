@@ -103,7 +103,7 @@ const Home = () => {
           <h1 className="font-bold text-xl sm:text-3xl md:text-4xl">
             O mais moderno equipamento de Ressonância Magnética de Niterói.
           </h1>
-          <div className="flex flex-col md:flex-row gap-2">
+          <div className="flex flex-row gap-2">
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-1">
                 <svg
@@ -269,7 +269,7 @@ const Home = () => {
                       alt={`Slide ${index + 1}`}
                       width={150}
                       height={150}
-                      className="max-h-[80px] max-w-[150] mx-auto object-contain"
+                      className="max-h-[50px] max-w-[150] mx-auto object-contain"
                     />
                   </div>
                 </SwiperSlide>
@@ -281,91 +281,49 @@ const Home = () => {
 
       {/* Seção: IRSA Solidário */}
       <motion.div
-        id="solidario"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 3, ease: "easeOut" }}
-        viewport={{ amount: 0.2 }}
-      >
-        <div className="w-full h-[400px] sm:h-[500px] md:h-[700px] relative">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/images/irsa-solidario.mp4" type="video/mp4" />
-          </video>
-          <div className="flex z-20 flex-col absolute inset-0 items-center justify-center gap-6 px-4">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold">
-              IRSA SOLIDÁRIO
-            </h1>
-            <div className="flex flex-col gap-5">
-              <div className="flex flex-wrap gap-4 justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="35"
-                  height="35"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-circle-check text-emerald-500"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-                <p className="w-full max-w-[90%] sm:text-lg sm:max-w-[600px] text-white font-light px-4">
-                  Se você não tem plano de saúde ou está desempregado, pode realizar exames por imagem com qualidade e preço acessível.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="35"
-                  height="35"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-circle-check text-emerald-500"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-                <p className="w-full max-w-[90%] sm:text-lg sm:max-w-[600px] text-white font-light px-4">
-                  Além disso, é possível parcelar em até 5x sem juros.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4 items-center justify-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="35"
-                  height="35"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-circle-check text-emerald-500"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-                <p className="w-full max-w-[90%] sm:text-lg sm:max-w-[600px] text-white font-light px-4">
-                  Basta entrar em contato com nossa Central de Atendimento ou pelo WhatsApp e informar que deseja participar do IRSA SOLIDÁRIO.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+  id="solidario"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 3, ease: "easeOut" }}
+  viewport={{ amount: 0.2 }}
+>
+  <div className="w-full h-[400px] sm:h-[500px] md:h-[700px] relative">
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      className="w-full h-full object-cover"
+    >
+      <source src="/images/irsa-solidario.mp4" type="video/mp4" />
+    </video>
+    {/* Faixa horizontal que corta o vídeo ao meio */}
+    <div className="absolute inset-x-0 top-1/2 transform -translate-y-1/2 bg-sky-900 bg-opacity-90 py-10 px-4">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
+        <Image 
+          src="/images/irsalogo.png" 
+          alt="IRSA" 
+          width={80} 
+          height={80} 
+          className="w-16 sm:w-20 md:w-24 h-auto mb-2 sm:mb-4 mr-0 sm:mr-2 object-contain" 
+        />
+        <h1 className="text-white text-2xl sm:text-3xl md:text-5xl font-bold text-center">
+          IRSA Solidário
+        </h1>
+      </div>
+      <ul className="max-w-md mx-auto text-white text-xs sm:text-sm md:text-lg space-y-2 text-left">
+        <li className="font-light">
+          Exames por imagem com <span className="text-emerald-500">preço acessível</span> para desempregados e pessoas sem plano de saúde.
+        </li>
+        <li className="font-light">
+          Parcelamos em <span className="text-emerald-500">5x SEM JUROS</span>. Basta entrar em contato com nossa Central de Atendimento.
+        </li>
+      </ul>
+    </div>
+  </div>
+</motion.div>
+
+
 
       {/* Seção: Exames */}
       <motion.div
@@ -381,7 +339,7 @@ const Home = () => {
             <Swiper
               autoplay={{
                 disableOnInteraction: false,
-                delay: 1000,
+                delay: 3000,
               }}
               modules={[Autoplay]}
               loop={true}
@@ -625,149 +583,138 @@ const Home = () => {
         </section>
       </motion.div>
 
-      {/* Seção: Sobre */}
       <motion.div
-        id="sobre"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 3, ease: "easeOut" }}
-        viewport={{ amount: 0.2 }}
-      >
-        <div className="justify-center items-center flex flex-wrap py-16 gap-[100px]">
-          <Image
-            className="rounded-full w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] object-cover"
-            src="/images/confianca.jpg"
-            alt="Confiança"
-            width={400}
-            height={400}
-          />
-          <div className="flex-col flex gap-[10px] p-5">
-            <h1 className="font-bold text-xl sm:text-3xl md:text-4xl">Sobre nós</h1>
-            <p className="text-sm sm:text-lg font-light">
-              O IRSA, referência em exames de imagem na cidade de Niterói{" "}
-              <span className="text-emerald-500 font-sm">desde 1967</span>, realiza
-              procedimentos de alta complexidade e está sempre investindo em seu
-              parque tecnológico para garantir a excelência nos laudos, tão
-              respeitados pelo corpo clínico da cidade e adjacências.
-            </p>
-            <p className="text-sm sm:text-lg font-light">
-              Atualmente possui{" "}
-              <span className="text-emerald-500 font-sm">
-                os mais modernos equipamentos{" "}
-              </span>
-              de Ressonância Magnética, Tomografia Computadorizada, Mamografia
-              Digital, Densitometria Óssea, Ultrassonografia, Doppler Colorido,
-              Ecodoppler Cardíaco, Elastografia Hepática e Raio X de Niterói.
-            </p>
-          </div>
-        </div>
+  id="sobre"
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  transition={{ duration: 3, ease: "easeOut" }}
+  viewport={{ amount: 0.2 }}
+>
+  {/* Seção "Sobre nós" */}
+  <div className="flex flex-col md:flex-row justify-center items-center py-16 gap-8 md:gap-16 px-4">
+    <Image
+      className="rounded-full w-[250px] h-[250px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] object-cover"
+      src="/images/confianca.jpg"
+      alt="Confiança"
+      width={400}
+      height={400}
+    />
+    <div className="flex flex-col gap-4 p-5 max-w-full md:max-w-lg">
+      <h1 className="font-bold text-xl sm:text-2xl md:text-3xl">Sobre nós</h1>
+      <p className="text-xs sm:text-sm md:text-base font-light">
+        O IRSA, referência em exames de imagem na cidade de Niterói{" "}
+        <span className="text-emerald-500">desde 1967</span>, realiza procedimentos de alta complexidade e está sempre investindo em seu parque tecnológico para garantir a excelência nos laudos, tão respeitados pelo corpo clínico da cidade e adjacências.
+      </p>
+      <p className="text-xs sm:text-sm md:text-base font-light">
+        Atualmente possui <span className="text-emerald-500">os mais modernos equipamentos</span> de Ressonância Magnética, Tomografia Computadorizada, Mamografia Digital, Densitometria Óssea, Ultrassonografia, Doppler Colorido, Ecodoppler Cardíaco, Elastografia Hepática e Raio X de Niterói.
+      </p>
+    </div>
+  </div>
 
-        <div className="justify-center items-center flex flex-wrap py-16 gap-[100px] bg-gray-50">
-          <div className="flex flex-col bg-sky-900 rounded-2xl p-10 text-white gap-[20px]">
-            <h1 className="text-3xl">Atendimento Humanizado</h1>
-            <p className="max-w-[400px] font-light">
-              Possui também uma equipe de médicos composta de profissionais
-              renomados, professores universitários e membros da Sociedade
-              Brasileira de Radiologia e do Colégio Brasileiro de Radiologia, o que
-              garante a excelência dos serviços prestados. Tudo para proporcionar
-              mais segurança para você e sua família.
-            </p>
-          </div>
-          <div className="flex-col flex gap-[20px] p-5">
-            <h1 className="font-bold text-4xl">Você sabia?</h1>
-            <div className="flex flex-wrap gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check-big text-emerald-700"
-              >
-                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                <path d="m9 11 3 3L22 4" />
-              </svg>
-              <p> O IRSA é pioneiro em radiologia em Niterói. </p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check-big text-emerald-700"
-              >
-                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                <path d="m9 11 3 3L22 4" />
-              </svg>
-              <p> Possui o equipamento mais amplo de Niterói </p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check-big text-emerald-700"
-              >
-                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                <path d="m9 11 3 3L22 4" />
-              </svg>
-              <p> É referência em todos os métodos diagnósticos. </p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check-big text-emerald-700"
-              >
-                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                <path d="m9 11 3 3L22 4" />
-              </svg>
-              <p> Todos seus exames são revisados. </p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-circle-check-big text-emerald-700"
-              >
-                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
-                <path d="m9 11 3 3L22 4" />
-              </svg>
-              <p> Possui canal de contato direto com o seu médico. </p>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+  {/* Seção "Você sabia?" e Atendimento Humanizado */}
+  <div className="flex flex-col md:flex-row justify-center items-center py-16 gap-8 md:gap-16 bg-gray-50 px-4">
+    <div className="flex flex-col bg-sky-900 rounded-2xl p-6 sm:p-10 text-white gap-4 max-w-full md:max-w-sm">
+      <h1 className="text-xl sm:text-2xl md:text-3xl">Atendimento Humanizado</h1>
+      <p className="text-xs sm:text-sm md:text-base max-w-full md:max-w-xs font-light">
+        Possui também uma equipe de médicos composta de profissionais renomados, professores universitários e membros da Sociedade Brasileira de Radiologia e do Colégio Brasileiro de Radiologia, o que garante a excelência dos serviços prestados. Tudo para proporcionar mais segurança para você e sua família.
+      </p>
+    </div>
+    <div className="flex flex-col gap-4 p-5 max-w-full md:max-w-sm">
+      <h1 className="font-bold text-xl sm:text-2xl md:text-3xl">Você sabia?</h1>
+      <div className="flex items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check-big text-emerald-700"
+        >
+          <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+          <path d="m9 11 3 3L22 4" />
+        </svg>
+        <p className="text-xs sm:text-sm md:text-base">O IRSA é pioneiro em radiologia em Niterói.</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check-big text-emerald-700"
+        >
+          <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+          <path d="m9 11 3 3L22 4" />
+        </svg>
+        <p className="text-xs sm:text-sm md:text-base">Possui o equipamento mais amplo de Niterói.</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check-big text-emerald-700"
+        >
+          <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+          <path d="m9 11 3 3L22 4" />
+        </svg>
+        <p className="text-xs sm:text-sm md:text-base">É referência em todos os métodos diagnósticos.</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check-big text-emerald-700"
+        >
+          <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+          <path d="m9 11 3 3L22 4" />
+        </svg>
+        <p className="text-xs sm:text-sm md:text-base">Todos seus exames são revisados.</p>
+      </div>
+      <div className="flex items-center gap-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="lucide lucide-circle-check-big text-emerald-700"
+        >
+          <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+          <path d="m9 11 3 3L22 4" />
+        </svg>
+        <p className="text-xs sm:text-sm md:text-base">Possui canal de contato direto com o seu médico.</p>
+      </div>
+    </div>
+  </div>
+</motion.div>
+
 
       {/* Seção: Mural de Avaliações */}
       <motion.div
