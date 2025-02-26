@@ -115,7 +115,7 @@
   }
 }
 
-@keyframes float {
+@keyframes float2 {
   0%, 100% {
     transform: translateY(0);
   }
@@ -124,8 +124,8 @@
   }
 }
 
-.animate-float {
-  animation: float 3s ease-in-out infinite;
+.animate-float2 {
+  animation: float2 3s ease-in-out infinite;
 }
 
 
@@ -159,4 +159,8 @@
   75%{
     transform: translateY(10px);
   }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }

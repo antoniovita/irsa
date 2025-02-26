@@ -74,10 +74,10 @@ const router = useRouter();
             height={400}
             className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] object-cover"
           />
-          <h1 className="text-white absolute top-[50%] left-2 transform -translate-y-1/2 p-2 sm:p-3 rounded-3xl bg-emerald-700 text-center animate-float text-sm sm:text-base">
+          <h1 className="text-white absolute top-[50%] left-2 transform -translate-y-1/2 p-2 sm:p-3 rounded-3xl bg-emerald-700 text-center animate-float2 text-sm sm:text-base">
             Atendimento excelente
           </h1>
-          <h1 className="text-white absolute bottom-2 right-2 p-2 sm:p-3 rounded-3xl bg-emerald-700 text-center animate-float text-sm sm:text-base">
+          <h1 className="text-white absolute bottom-2 right-2 p-2 sm:p-3 rounded-3xl bg-emerald-700 text-center animate-float2 text-sm sm:text-base">
             Equipamento moderno
           </h1>
         </div>
@@ -205,21 +205,21 @@ const router = useRouter();
             height={400}
             className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] object-cover"
           />
-          <div className="text-xs sm:text-sm text-yellow-300 absolute top-[30%] left-4 sm:left-10 transform -translate-y-1/2 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float">
+          <div className="text-xs sm:text-sm text-yellow-300 absolute top-[30%] left-[20%] transform -translate-y-1/2 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float2">
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
           </div>
-          <h1 className="text-xs sm:text-sm font-light text-yellow-300 absolute bottom-4 right-2 sm:right-4 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float">
+          <h1 className="text-xs sm:text-sm font-light text-yellow-300 absolute bottom-[20%] right-2 sm:right-4 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float2">
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
           </h1>
-          <h1 className="text-xs sm:text-sm font-light text-yellow-300 absolute bottom-2 left-2 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float">
+          <h1 className="text-xs sm:text-sm font-light text-yellow-300 absolute bottom-2 left-2 p-2 sm:p-3 rounded-3xl bg-sky-900 text-center animate-float2">
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
             <FontAwesomeIcon icon={faStar} />
@@ -595,7 +595,7 @@ const router = useRouter();
   </div>
 
   {/* Container do texto */}
-  <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-md gap-4">
+  <div className="flex flex-col mt-4 md:mt-0 items-center md:items-start text-center md:text-left max-w-md gap-4">
     <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
       Siga nossas redes sociais
     </h1>
