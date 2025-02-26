@@ -38,7 +38,7 @@ const Convenios = () => {
           {imageUrls.map((url, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:scale-105 p-4 flex items-center justify-center"
+              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform cursor-pointer hover:scale-105 p-4 flex items-center justify-center"
             >
               <Image
                 src={url}

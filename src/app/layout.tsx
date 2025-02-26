@@ -40,7 +40,7 @@ export default function RootLayout({
 
             {/* Menu desktop */}
             <nav className="hidden md:flex items-center space-x-10">
-              <Link href="#exames" className="text-gray-700 hover:text-gray-900">
+              <Link href="/exames" className="text-gray-700 hover:text-gray-900">
                 Exames
               </Link>
               <Link href="#sobre" className="text-gray-700 hover:text-gray-900">
@@ -49,7 +49,7 @@ export default function RootLayout({
               <Link href="/convenios" className="text-gray-700 hover:text-gray-900">
                 Convênios
               </Link>
-              <Link href="#solidario" className="text-gray-700 hover:text-gray-900">
+              <Link href="/solidario" className="text-gray-700 hover:text-gray-900">
                 IRSA Solidário
               </Link>
             </nav>
@@ -96,7 +96,7 @@ export default function RootLayout({
           {menuOpen && (
             <nav className="md:hidden bg-white shadow-md">
               <div className="px-4 py-4 flex flex-col space-y-4">
-                <Link href="#exames" className="text-gray-700 hover:text-gray-900">
+                <Link href="/exames" className="text-gray-700 hover:text-gray-900">
                   Exames
                 </Link>
                 <Link href="#sobre" className="text-gray-700 hover:text-gray-900">
@@ -105,7 +105,7 @@ export default function RootLayout({
                 <Link href="/convenios" className="text-gray-700 hover:text-gray-900">
                   Convênios
                 </Link>
-                <Link href="#solidario" className="text-gray-700 hover:text-gray-900">
+                <Link href="/solidario" className="text-gray-700 hover:text-gray-900">
                   IRSA Solidário
                 </Link>
               </div>

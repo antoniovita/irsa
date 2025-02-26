@@ -7,6 +7,11 @@ import { Autoplay } from "swiper/modules";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { faInstagram , faFacebookF, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { useRouter } from 'next/navigation';
+
+
 
 const imageUrls = [
   "/images/convenio/1.jpg",
@@ -37,6 +42,9 @@ const imageUrls = [
 ];
 
 const Home = () => {
+
+const router = useRouter();
+
   return (
     <div className="">
       {/* Slide principal */}
@@ -82,7 +90,7 @@ const Home = () => {
             investindo em nosso parque tecnológico para garantir a excelência
             nos laudos, tão respeitados pelo corpo clínico da cidade e adjacências.
           </p>
-          <Button className="text-sm sm:text-lg">Resultados Online</Button>
+          <Button onClick={ () => router.push('/resultados')} className="text-xs sm:text-sm md:text-lg">Resultados Online</Button>
         </div>
       </section>
     </SwiperSlide>
@@ -244,7 +252,7 @@ const Home = () => {
       >
         <section className="px-6 py-16 bg-gray-50">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="font-bold text-xl sm:text-3xl md:text-4xl">Nossos Convênios</h1>
+            <h1 className="font-bold text-xl sm:text-3xl md:text-4xl mb-3">Nossos Convênios</h1>
             <Swiper
               slidesPerView={3}
               spaceBetween={20}
@@ -311,6 +319,7 @@ const Home = () => {
           IRSA Solidário
         </h1>
       </div>
+      <div className="flex flex-col bg-sky-950 p-5 rounded-xl w-[500px] items-center justify-center mx-auto">
       <ul className="max-w-md mx-auto text-white text-xs sm:text-sm md:text-lg space-y-2 text-left">
         <li className="font-light">
           Exames por imagem com <span className="text-emerald-500">preço acessível</span> para desempregados e pessoas sem plano de saúde.
@@ -319,6 +328,7 @@ const Home = () => {
           Parcelamos em <span className="text-emerald-500">5x SEM JUROS</span>. Basta entrar em contato com nossa Central de Atendimento.
         </li>
       </ul>
+      </div>
     </div>
   </div>
 </motion.div>
@@ -368,7 +378,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     O mais moderno equipamento de Ressonância Magnética de Niterói.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 2 */}
@@ -387,7 +396,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Ampla tradição na realização de estudos tomográficos.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 3 */}
@@ -406,7 +414,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Avalia alterações no fluxo venoso, como varizes ou trombose.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 4 */}
@@ -425,7 +432,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Método para medir a massa óssea e diagnosticar a osteoporose.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 5 */}
@@ -444,7 +450,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Exame não invasivo para diagnosticar o câncer de mama.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 6 */}
@@ -463,7 +468,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Imagens dinâmicas para o diagnóstico de diversas patologias.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 7 */}
@@ -482,7 +486,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Diagnóstico e acompanhamento de doenças com precisão.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 8 */}
@@ -501,7 +504,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Avalia fibrose hepática e danos no fígado de forma rápida.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 9 */}
@@ -518,7 +520,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Atendimento imediato sem agendamento prévio.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 10 */}
@@ -537,7 +538,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Procedimento para examinar nódulos e calcificações.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 11 */}
@@ -556,7 +556,6 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Exame para diagnosticar se o nódulo é maligno ou benigno.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
               {/* Card 12 */}
@@ -575,13 +574,57 @@ const Home = () => {
                   <p className="mt-2 text-gray-600 flex-grow font-light">
                     Avalia as estruturas vasculares do organismo.
                   </p>
-                  <Button className="mt-4">Agende Agora</Button>
                 </div>
               </SwiperSlide>
             </Swiper>
           </div>
         </section>
       </motion.div>
+
+
+<div className="flex flex-col md:flex-row justify-center items-center xl:gap-[70px] p-4 py-10">
+  {/* Container da imagem com os ícones */}
+  <div className="w-full max-w-[400px]">
+    <Image
+      src="/images/telefone.png"
+      alt="Telefone"
+      width={400}
+      height={400}
+      className="w-full h-auto object-cover rounded-lg animate-float"
+    />
+  </div>
+
+  {/* Container do texto */}
+  <div className="flex flex-col items-center md:items-start text-center md:text-left max-w-md gap-4">
+    <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
+      Siga nossas redes sociais
+    </h1>
+    <p className="text-sm sm:text-base md:text-lg font-light">
+      Fique por dentro de todas as novidades do IRSA! Siga-nos em nossas redes
+      sociais para receber dicas exclusivas, atualizações sobre exames de imagem
+      e iniciativas. Não perca a oportunidade de estar sempre informado e
+      conectado com o que há de melhor na área da saúde!
+    </p>
+    <div className="flex flex-row gap-[20px]">
+      <Link href={""} className="text-3xl bg-sky-900 py-1 px-2 rounded-full text-white"> <FontAwesomeIcon icon={faInstagram} /> </Link>
+      <Link href={""}className="text-3xl bg-sky-900 py-1 px-3 rounded-full text-white">  <FontAwesomeIcon icon={faFacebookF} /> </Link>
+      <Link href={""}className="text-3xl bg-sky-900 py-1 px-2 rounded-full text-white"><FontAwesomeIcon icon={faWhatsapp} /></Link>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <motion.div
   id="sobre"
@@ -723,7 +766,7 @@ const Home = () => {
   transition={{ duration: 3, ease: "easeOut" }}
   viewport={{ amount: 0.2 }}
 >
-  <div className="flex flex-col justify-center items-center py-16 bg-gray-100 px-4">
+  <div id="avaliacao" className="flex flex-col justify-center items-center py-16 bg-gray-100 px-4">
     <div className="w-full max-w-5xl mx-auto text-center">
       <h1 className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-8">
         Mural de Avaliações
@@ -776,7 +819,7 @@ const Home = () => {
           width={300}
           height={150}
           sizes="(max-width: 768px) 80vw, 150px"
-          className="w-[150px] sm:w-[300px] md:w-[300px] h-auto mx-auto"
+          className="w-[150px] sm:w-[200px] md:w-[200px] h-auto mx-auto"
         />
       </div>
     </div>
