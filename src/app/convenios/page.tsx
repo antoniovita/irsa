@@ -27,6 +27,12 @@ const Convenios = () => {
       "/images/convenio/24.png",
       "/images/convenio/25.png",
       "/images/convenio/26.jpg",
+      "/images/convenio/27.png",
+      "/images/convenio/33.webp",
+      "/images/convenio/29.png",
+      "/images/convenio/30.png",
+      "/images/convenio/31.png",
+      "/images/convenio/32.png",
     ];
   
     return (
@@ -38,7 +44,7 @@ const Convenios = () => {
           {imageUrls.map((url, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform cursor-pointer hover:scale-105 p-4 flex items-center justify-center"
+              className="bg-white rounded-lg shadow-md transition-all duration-300 transform p-4 flex items-center justify-center"
             >
               <Image
                 src={url}
