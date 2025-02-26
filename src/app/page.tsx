@@ -319,7 +319,7 @@ const router = useRouter();
           IRSA Solidário
         </h1>
       </div>
-      <div className="flex flex-col bg-sky-950 p-5 rounded-xl w-[500px] items-center justify-center mx-auto">
+      <div className="flex flex-col bg-sky-950 p-5 rounded-xl w-full max-w-[500px] items-center justify-center mx-auto">
       <ul className="max-w-md mx-auto text-white text-xs sm:text-sm md:text-lg space-y-2 text-left">
         <li className="font-light">
           Exames por imagem com <span className="text-emerald-500">preço acessível</span> para desempregados e pessoas sem plano de saúde.
